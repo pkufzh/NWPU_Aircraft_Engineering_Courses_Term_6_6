@@ -1,0 +1,46 @@
+MATLAB软件与应用（第3次上机MATLAB程序源代码）
+姓名：冯铮浩
+学号：2017300281
+学院：航空学院
+完成时间：2020年4月14日
+
+部分程序运行结果如下：
+
+【11】问题11：未修改时（默认）的三维曲线句柄如下：
+
+fig_1 = 
+
+  Line - 属性:
+
+              Color: [0 0.4470 0.7410]
+          LineStyle: '-'
+          LineWidth: 0.5000
+             Marker: 'none'
+         MarkerSize: 6
+    MarkerFaceColor: 'none'
+              XData: [1×201 double]
+              YData: [1×201 double]
+              ZData: [1×201 double]
+
+  显示 所有属性
+
+修改后的三维曲线句柄如下：
+
+fig_1 = 
+
+  Line - 属性:
+
+              Color: [0 1 0]
+          LineStyle: '--'
+          LineWidth: 2
+             Marker: 'none'
+         MarkerSize: 6
+    MarkerFaceColor: 'none'
+              XData: [1×201 double]
+              YData: [1×201 double]
+              ZData: [1×201 double]
+
+  显示 所有属性
+
+
+【12】问题12：利用搜索法获得所有曲线中满足线型为虚线的曲线共有1条，编号为：2号

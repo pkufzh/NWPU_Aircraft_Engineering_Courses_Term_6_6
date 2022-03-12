@@ -1,0 +1,624 @@
+# ICEM CFD Project Settings
+# Saved by nwpufzh on NWPUFZH on Sat Jun 06 21:47:38 中国标准时间 2020
+# ICEM CFD - version 18.2 - Release date: Jul 17 2017
+
+array set file_name {
+    catia_dir .
+    parts_dir .
+    domain_loaded 0
+    cart_file_loaded 0
+    cart_file {}
+    archive {}
+    med_replay {}
+    topology_dir .
+    ugparts_dir .
+    icons {{$env(ICEM_ACN)/lib/ai_env/icons} {$env(ICEM_ACN)/lib/va/EZCAD/icons} {$env(ICEM_ACN)/lib/icons} {$env(ICEM_ACN)/lib/va/CABIN/icons}}
+    tetin Airfoil_004.tin
+    family_boco Airfoil_004.fbc
+    iges_dir .
+    solver_params_loaded 0
+    attributes_loaded 0
+    project_lock {}
+    attributes Airfoil_004.atr
+    domain {}
+    domains_dir .
+    settings_loaded 0
+    settings Airfoil_004.prj
+    blocking Airfoil_004.blk
+    hexa_replay {}
+    transfer_dir .
+    mesh_dir .
+    family_topo {}
+    gemsparts_dir .
+    family_boco_loaded 0
+    tetin_loaded 0
+    project_dir .
+    topo_mulcad_out {}
+    solver_params {}
+}
+array set options {
+    expert 1
+    remote_path {}
+    tree_disp_quad 2
+    tree_disp_pyra 0
+    evaluate_diagnostic 0
+    histo_show_default 1
+    select_toggle_corners 0
+    remove_all 0
+    keep_existing_file_names 0
+    record_journal 0
+    edit_wait 0
+    face_mode all
+    select_mode all
+    med_save_emergency_tetin 1
+    user_name nwpufzh
+    diag_which all
+    uns_warn_if_display 500000
+    bubble_delay 1000
+    external_num 1
+    tree_disp_tri 2
+    apply_all 0
+    temporary_directory {}
+    flood_select_angle 0
+    home_after_load 1
+    project_active 0
+    histo_color_by_quality_default 1
+    undo_logging 1
+    tree_disp_hexa 0
+    histo_solid_default 1
+    host_name NWPUFZH
+    xhidden_full 1
+    replay_internal_editor 1
+    editor {}
+    mouse_color orange
+    clear_undo 1
+    remote_acn {}
+    remote_sh csh
+    tree_disp_penta 0
+    n_processors 1
+    remote_host {}
+    save_to_new 0
+    quality_info Quality
+    tree_disp_node 0
+    med_save_emergency_mesh 1
+    redtext_color red
+    tree_disp_line 0
+    select_edge_mode 0
+    use_dlremote 0
+    max_mesh_map_size 1024
+    show_tris 1
+    remote_user {}
+    enable_idle 0
+    auto_save_views 1
+    max_cad_map_size 512
+    display_origin 0
+    uns_warn_user_if_display 1000000
+    detail_info 0
+    win_java_help 0
+    show_factor 1
+    boundary_mode all
+    clean_up_tmp_files 1
+    auto_fix_uncovered_faces 1
+    med_save_emergency_blocking 1
+    max_binary_tetin 0
+    tree_disp_tetra 0
+}
+array set disp_options {
+    uns_dualmesh 0
+    uns_warn_if_display 500000
+    uns_normals_colored 0
+    uns_icons 0
+    uns_locked_elements 0
+    uns_shrink_npos 0
+    uns_node_type None
+    uns_icons_normals_vol 0
+    uns_bcfield 0
+    backup Wire
+    uns_nodes 0
+    uns_only_edges 0
+    uns_surf_bounds 0
+    uns_wide_lines 0
+    uns_vol_bounds 0
+    uns_orientation 0
+    uns_directions 0
+    uns_thickness 0
+    uns_shell_diagnostic 0
+    uns_normals 0
+    uns_couplings 0
+    uns_periodicity 0
+    uns_single_surfaces 0
+    uns_midside_nodes 1
+    uns_shrink 100
+    uns_multiple_surfaces 0
+    uns_no_inner 0
+    uns_enums 0
+    uns_disp Wire
+    uns_bcfield_name {}
+    uns_color_by_quality 0
+    uns_changes 0
+    uns_cut_delay_count 1000
+}
+set icon_size1 24
+set icon_size2 35
+set thickness_defined 0
+set solver_type 1
+set solver_setup -1
+array set prism_values {
+    n_triangle_smoothing_steps 5
+    min_smoothing_steps 6
+    first_layer_smoothing_steps 1
+    new_volume {}
+    height {}
+    prism_height_limit {}
+    interpolate_heights 0
+    n_tetra_smoothing_steps 10
+    do_checks {}
+    delete_standalone 1
+    ortho_weight 0.50
+    max_aspect_ratio {}
+    ratio_max {}
+    incremental_write 0
+    total_height {}
+    use_prism_v10 0
+    intermediate_write 1
+    delete_base_triangles {}
+    ratio_multiplier {}
+    verbosity_level 1
+    refine_prism_boundary 1
+    max_size_ratio {}
+    triangle_quality {}
+    max_prism_angle 180
+    tetra_smooth_limit 0.3
+    max_jump_factor 5
+    use_existing_quad_layers 0
+    layers 3
+    fillet 0.10
+    into_orphan 0
+    init_dir_from_prev {}
+    blayer_2d 0
+    do_not_allow_sticking {}
+    top_family {}
+    law exponential
+    min_smoothing_val 0.1
+    auto_reduction 0
+    stop_columns 1
+    stair_step 1
+    smoothing_steps 12
+    side_family {}
+    min_prism_quality 0.01
+    ratio 1.2
+}
+set aie_current_flavor {}
+array set vid_options {
+    wb_NS_to_subset 0
+    wb_import_mat_points 1
+    wb_import_surface_bodies 1
+    wb_import_cad_att_pre {SDFEA;DDM}
+    wb_import_mix_res_line 0
+    wb_import_tritol 0.001
+    auxiliary 0
+    wb_import_cad_att_trans 1
+    wb_import_mix_res_surface 0
+    wb_import_mix_res -1
+    show_name 0
+    wb_import_solid_bodies 1
+    wb_import_delete_solids 0
+    wb_import_mix_res_solid 0
+    wb_import_save_pmdb {}
+    inherit 1
+    default_part GEOM
+    new_srf_topo 1
+    wb_import_associativity_model_name {}
+    DelPerFlag 1
+    wb_import_line_bodies 0
+    wb_import_save_partfile 0
+    show_item_name 0
+    composite_tolerance 1.0
+    wb_NS_to_entity_parts 0
+    wb_import_en_sym_proc 1
+    wb_import_reference_key 0
+    wb_import_sel_proc 1
+    wb_import_work_points 0
+    wb_import_geom 1
+    wb_NS_only 0
+    wb_import_mix_res_point 0
+    wb_import_pluginname {}
+    wb_import_create_solids 0
+    wb_import_refresh_pmdb 0
+    wb_import_sel_pre {}
+    wb_import_lcs 0
+    wb_import_scale_geo Default
+    wb_import_load_pmdb {}
+    replace 0
+    wb_import_cad_associativity 0
+    same_pnt_tol 1e-4
+    tdv_axes 1
+    wb_import_mesh 0
+    vid_mode 0
+    DelBlkPerFlag 0
+}
+set savedTreeVisibility {geomNode 1 geom_subsetNode 0 geomPointNode 2 geomCurveNode 2 geomSurfNode 2 geomBodyNode 2 blockingNode 1 block_subsetNode 2 block_vertNode 0 block_edgeNode 2 block_faceNode 0 block_blockNode 0 block_meshNode 0 topoNode 2 topo-root 2 partNode 1 part-FAR 2 part-FLUID 2 part-NULL 2 part-VORFN 0 part-WALL 2}
+set last_view {rot {0.00114416426045 -0.00114416426045 0.0 0.999998690887} scale {202.977133656 202.977133656 202.977133656} center {0 0 1.2312607411499999e-010} pos {-72.3921102598 -11.9477744691 0}}
+array set cut_info {
+    active 0
+}
+array set hex_option {
+    default_bunching_ratio 2.0
+    floating_grid 0
+    project_to_topo 0
+    n_tetra_smoothing_steps 20
+    sketching_mode 0
+    trfDeg 1
+    wr_hexa7 0
+    smooth_ogrid 0
+    find_worst 1-3
+    hexa_verbose_mode 0
+    old_eparams 0
+    uns_face_mesh_method uniform_quad
+    multigrid_level 0
+    uns_face_mesh one_tri
+    check_blck 0
+    proj_limit 0
+    check_inv 0
+    project_bspline 0
+    hexa_update_mode 1
+    default_bunching_law BiGeometric
+    worse_criterion Quality
+}
+array set saved_views {
+    views {}
+}
+
+#------------- DEZ Data ------------------
+
+namespace eval ::AIEnv::GUIManagement::DEZ {
+    array set deleteEntityDEZ_data {
+        this deleteEntityDEZ
+        type surface
+        entityList {}
+        DelUnattFlag 0
+    }
+    array set splitBlkDEZ_data {
+        this splitBlkDEZ
+        type DEZ
+        splitBlkVal 1
+        splitBlkBlkSelVal 0
+        markedBlock {}
+        splitBlkEdge {}
+        copy_from_parallel 0
+        project 0
+        move_ogrid_nodes 0
+        nearest_node_split 0
+        splitBlkEdgeMethodVal 0
+        splitPoint {}
+        splitPar 0.5
+        splitDist {}
+        splitCurve {}
+        splitCurvePar {}
+        Faces {}
+        Edges {}
+        Vertices {}
+        around 1
+        offset 1
+        absolute 0
+        link_shape 0
+        splitExtendGGVal 0
+        splitBlkBlkSel2Val 0
+        markedBlock2 {}
+        ExtendEdge {}
+        SelectionMethodVal 1
+        splitFace {}
+        splitFaceEdge {}
+        splitVerts {}
+        sblock {}
+        iface {}
+        ImprintUnsBlkMethodVal 0
+        ImprintUnsBlkEGVal 0
+        vecImprintList {}
+        SplitUnsBlk3dFMVal 0
+        ublock {}
+        splitSheets1 {}
+        iFace {}
+        edgesProj {}
+        SplitUnsBlk3dMethodVal 0
+        SplitUnsBlk3dEGVal 0
+        SplitUnsBlk3dOutputVal 0
+        uFace1 {}
+        uFace2 {}
+        splitSheets2 {}
+        splitSheets {}
+    }
+    array set mergeBVertexDEZ_data {
+        this mergeBVertexDEZ
+        type DEZ
+        mergeBVertexmainVal 0
+        merge_multipleEGVal 0
+        pickblkbound {}
+        propagate 1
+        merge_ave 0
+        force_edge_collapse 0
+        rebuild_orphan 0
+        update_projections 0
+        update_edge_node_count 0
+        pickverbase {}
+        tolerance {}
+        collapseBlkEdge {}
+        collapseBlks {}
+        mergeVert {}
+        splitEdge {}
+    }
+    array set editBlockMenuDEZ_data {
+        this editBlockMenuDEZ
+        type DEZ
+        editBlkmainVal 2
+        joinBlockGGVal 0
+        joinBlocks {}
+        refDirEdge {}
+        joinBlockFaceFaceVal 0
+        joinFaceCorners {}
+        joinFaceBlocks {}
+        modOgridEGVal 0
+        rescaleOBlkSelVal 0
+        rescaleBlks {}
+        OEdge {{ 2 3 1 } 3 0}
+        absolute 0
+        distance 0.8
+        resetOgridEdge {}
+        periodicBlkMVal 0
+        perVerts {}
+        convBlockTypeVal 1
+        convBlocks {}
+        swept_face {}
+        merge_parallel 0
+        mapped_face {}
+        freeBlockFaceFreeTypeMappedMethodVal 0
+        vertsFree {}
+        sblock {}
+        sheet {}
+        ublock {}
+        meshTypeList {"Tetra-Delaunay" "Tetra-Adv.Front" "Hexa-Core" "Hexa-Dominant" "TGrid"}
+        mesh_type {}
+        __setUBlockMtype_Last_Index 0
+        sbmeshTypeList {{Tri (STL like)} {All Tri} {All Quad} {Quad Dominant} {Quad w/one Tri}}
+        sbmesh_type {Quad w/one Tri}
+        __setSBlockMtype_Last_Index 0
+        sblock_faces {}
+        editBlockIJKHowVal 0
+        blocks {}
+        vert {}
+        transferBlocks {}
+    }
+    array set editProjDEZ_data {
+        this editProjDEZ
+        type DEZ
+        editAssocEGVal 1
+        assocVertEGVal 1
+        verts 48
+        part_name {}
+        point {}
+        curves {}
+        edges {}
+        update 0
+        intersection 0
+        curve_intersection 0
+        curve_refmesh 0
+        projFacBlkseVal 2
+        faces {}
+        solids {}
+        projFaceSharedGGVal 0
+        surface {}
+        face_surface {}
+        unsetAssocFaceKeepMeshVal 0
+        FaceKeepMeshEGVal 0
+        updateVert 0
+        updateEdge 0
+        updateFace 0
+        updateDormant 0
+        updateAssocBlockGGVal 0
+        update_method parametric
+        resetVert 0
+        v_reset_method all
+        resetEdge 0
+        e_reset_method all
+        resetFace 0
+        f_reset_method all
+        projVUpdateGGVal 0
+        projVerts {}
+        move_ogrid 0
+        groupEGVal 0
+        groupTypeVal 0
+        groupCurvesList {}
+        auto_proj 1
+    }
+    array set moveBVertexDEZ_data {
+        this moveBVertexDEZ
+        type DEZ
+        moveBVertexmainVal 0
+        MoveVertexOptions {Single Multiple}
+        MVHow Single
+        __MVtype_Last_Index 0
+        moveVerts {}
+        mv_fixx 0
+        mv_fixy 0
+        mv_fixz 0
+        moveVertsDirGGVal 0
+        dirEdge {}
+        mv_normal 0
+        mv_depend 0
+        SetPostitionOptions {"Set Position" "Increment Position"}
+        SLHow {Set Position}
+        __SLtype_Last_Index 0
+        refLocTypeVal 0
+        ref_vertex {}
+        ref_point {}
+        SetLocCsysVal 0
+        SetLocBVertexXVal 0
+        X {}
+        SetLocBVertexYVal 0
+        Y {}
+        SetLocBVertexZVal 0
+        Z {}
+        SetLocBVertexNVal 0
+        Normal {}
+        SetLocCylRVal 0
+        SetLocCylTVal 0
+        SetLocCylZVal 0
+        vertices {}
+        edge {}
+        vertex {}
+        AlignVertCsysVal 0
+        AlignVertexGGVal 0
+        AlignVertexPlaneMethod 1
+        Plane {}
+        AlignVertCylParVal 0
+        alignDir {}
+        vertList {}
+        edgeList {}
+        length {}
+        edgeLenGGVal 0
+        moveFacesEGVal 0
+        faceList {}
+        moveFaceGGVal 0
+        vector {}
+        vecList {}
+        center {}
+        angle {}
+        moveVertsGGVal 0
+    }
+    array set transformBlocksToolsDEZ_data {
+        this transformBlocksToolsDEZ
+        type DEZ
+        transfrmBlocksEGVal 0
+        BlkList {}
+        copyGGVal1 0
+        ncopies 1
+        also_whole_geom 0
+        moveBlocksEGVal 0
+        x 0
+        y 0
+        z 0
+        pointList2 {}
+        copyGGVal2 0
+        blkRotateAxisOptionEGVal 0
+        axisList {}
+        rot_angle 90
+        RotateBlkCenterEGVal 0
+        center_point {}
+        copyGGVal3 0
+        BlocksMirrorAxisOptionEGVal 0
+        normPointList {}
+        ReflectBlocksCenterEGVal 0
+        copyGGVal4 0
+        xF 1
+        yF 1
+        zF 1
+        ScaleBlocksCenterEGVal 0
+        inc_parts {}
+        copyGGVal5 0
+        transBlocksEGVal 0
+        rotateBlocksList {}
+        fromLCS {}
+        toLCS {}
+    }
+    array set editEdgeMenuDEZ_data {
+        this editEdgeMenuDEZ
+        type DEZ
+        editEdgemainVal 2
+        editEdgeSplitEdgeHowVal 0
+        edgeSplits {}
+        AutoedgeSplits {}
+        auto_linear_all 0
+        edges {}
+        editEdgeSplitEdgeTan1Val 0
+        tan_factor1 0.33
+        tan_point1 {}
+        editEdgeSplitEdgeTan2Val 0
+        tan_factor2 0.33
+        tan_point2 {}
+        vertexSplits {}
+        edgeUnSplitVal 0
+        edgeUnSplits {}
+        editEdgeLinkEGVal 0
+        edgeSLink {}
+        edgeTLinks {}
+        factor 1.0
+        editEdgeLinkDirGGVal 0
+        dir_vector {}
+        editEdgeLinkDirGG2Val 0
+        edgeLinkDim {}
+        edgeLinkSrcIndex {}
+        edgeLinkTargIndex {}
+        link all
+        edgeUnLink {}
+        editEdgeOptionsEdgeVal 0
+        edgesSplitType {}
+    }
+    array set hexMeshOptsDEZ_data {
+        this hexMeshOptsDEZ
+        type DEZ
+        mgLevel 0
+        displayLevel 0
+        projLimit 0
+        lawList {Uniform Hyperbolic BiGeometric Poisson}
+        meshLaw BiGeometric
+        __hexMeshOptsMLaw_Last_Index 0
+        ratio 2.0
+        find_worst 1-3
+        smoothOgrid 0
+        floatGrid 0
+        proj 0
+        check_blck 0
+        check_inv 0
+        wr_hexa7 0
+        project_to_topo 0
+        hexa_verbose_mode 0
+        hexa_update_mode 1
+        trfDeg 1
+        refTopo {}
+        unsTypeList {{Tri (STL like)} {All Tri} {All Quad} {Quad Dominant} {Quad w/one Tri}}
+        unsType {Quad w/one Tri}
+        __hexMeshOptsUns_Last_Index 0
+        unsMethodList {{ICEM CFD Quad} {Gambit Pave} Auto}
+        unsMethod {ICEM CFD Quad}
+        __hexMeshOptsMet_Last_Index 0
+        hexEntTypes {"Vertices" "Edges" "Faces" "Struct. & Swept Blocks" "All Blocks"}
+        what_to_mesh {All Blocks}
+        __hexMeshOptsDim_Last_Index 0
+        nTetSmooth 20
+    }
+    array set createPartDEZ_data {
+        this createPartDEZ
+        type point
+        PartList {"From screen" FAR FLUID VORFN WALL}
+        name NULL
+        __createPartName_Last_Index 0
+        createPartSelectVal 3
+        entityList {}
+        adjust_geo_names 0
+        location {}
+        select_geo_0d 0
+        select_geo_1d 1
+        select_geo_2d 1
+        select_geo_3d 1
+        minx -25.9993
+        miny -20.9993
+        minz -0.999286
+        maxx 25.9993
+        maxy 20.9953
+        maxz 0.999286
+        BoxFlag 0
+        blocks {}
+    }
+    array set geoImportWBDEZ_data {
+        this geoImportWBDEZ
+        type DEZ
+        importWBFileList {}
+        file_to_convert {}
+        __geoImportWBProjectFiles_Last_Index 0
+        geoImportWBGGVal 0
+        wb_tetin_sizes_file C:/Users/Administrator/Desktop/Teamwork_Airfoil/Airfoil_Performance/UAV_Airfoil_Model_003.tin
+        unitsList {Default Nanometers Micrometers Millimeters Centimeters Meters Kilometers Microinches {Mils (thousands)} Inches Feet Miles}
+        unit Default
+        __geoImportScaleGeoList_Last_Index 0
+    }
+}

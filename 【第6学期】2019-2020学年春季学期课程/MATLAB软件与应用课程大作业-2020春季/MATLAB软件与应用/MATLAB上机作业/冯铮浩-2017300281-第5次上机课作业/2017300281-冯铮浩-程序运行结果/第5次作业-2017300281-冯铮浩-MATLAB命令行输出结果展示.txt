@@ -1,0 +1,91 @@
+MATLAB软件与应用（第5次上机MATLAB程序源代码）
+姓名：冯铮浩
+学号：2017300281
+学院：航空学院
+完成时间：2020年4月22日
+
+部分程序运行结果如下：
+
+【1】问题一的两种方法求解线性方程组结果如下：
+
+方法一：利用逆矩阵法求解线性方程组：
+
+结果x1如下：
+
+x1 =
+
+    3.7647
+    1.9412
+    1.2353
+    0.4706
+
+方法二：利用LU分解法求解线性方程组：
+
+利用LU分解法求解线性方程组对系数矩阵A进行三角分解如下：
+
+L =
+
+    0.2000    1.0000         0         0
+    0.4000    0.0556    1.0000         0
+    1.0000         0         0         0
+   -0.2000    0.9444    0.1429    1.0000
+
+
+U =
+
+    5.0000    2.0000   -1.0000   -1.0000
+         0    3.6000   -1.8000    2.2000
+         0         0   -3.5000    1.2778
+         0         0         0    0.5397
+
+结果x2如下：
+
+x2 =
+
+    3.7647
+    1.9412
+    1.2353
+    0.4706
+
+两种方法求解线性方程组结果一致。
+
+【2】问题二的两种方法求解非线性方程结果如下：
+
+方法一：利用solve指令（高版本MATLAB，可使用vpasolve指令）求解非线性方程：
+
+结果s1如下：
+
+s1 =
+
+  -0.4059 - 1.0781i
+  -0.4059 + 1.0781i
+   1.9059 + 0.3674i
+   1.9059 - 0.3674i
+
+方法二：利用roots指令求解非线性方程：
+
+结果s2如下：
+
+s2 =
+
+   1.9059 + 0.3674i
+   1.9059 - 0.3674i
+  -0.4059 + 1.0781i
+  -0.4059 - 1.0781i
+
+两种方法求解线性方程组结果一致。
+
+【3】问题三的两种插值方法图形可视化结果在图窗 Figure 1 中可见：
+
+关于双三次方法（cubic）插值网格外插节点出现NaN的原因分析：
+在 help Document 中，有关interp2的外插功能说明如下：
+
+Vq = interp2(___,method,extrapval) also specifies extrapval, a scalar value that is assigned to all queries that lie outside the domain of the sample points.
+If you omit the extrapval argument for queries outside the domain of the sample points, then based on the method argument interp2 returns one of the following:
+Extrapolated values for the "spline" and "makima" methods
+NaN values for other interpolation methods
+
+可见，interp2的外插功能仅限于二元样条插值（spline）与修改的Akima立方Hermite插值（makima），
+其余插值方法不支持二维外插节点。
+
+【4】问题四中2~5次多项式拟合曲线结果在图窗 Figure 2 中可见：

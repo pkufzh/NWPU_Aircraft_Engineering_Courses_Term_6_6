@@ -1,0 +1,904 @@
+# -*- coding: mbcs -*-
+from abaqus import *
+upgradeMdb('F:/ABAQUS_Course_Report/Wing_Model_006_Com-6.14-4.cae', 
+    'F:/ABAQUS_Course_Report/Wing_Model_006_Com.cae')
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].Part(name='Part-Merging-Geometry-failed', objectToCopy=
+    mdb.models['Model-1'].parts['Part-Merging-Geometry'])
+mdb.models['Model-1'].parts['Part-Merging-Geometry-failed'].Unlock(
+    reportWarnings=False)
+del mdb.models['Model-1'].parts['Part-Merging-Geometry']
+mdb.models['Model-1'].parts.changeKey(fromName='Part-Merging-Geometry-failed', 
+    toName='Part-Merging-Geometry')
+mdb.models['Model-1'].Part(name='Part-Wing-Main-Spar-failed', objectToCopy=
+    mdb.models['Model-1'].parts['Part-Wing-Main-Spar'])
+mdb.models['Model-1'].parts['Part-Wing-Main-Spar-failed'].Unlock(
+    reportWarnings=False)
+del mdb.models['Model-1'].parts['Part-Wing-Main-Spar']
+mdb.models['Model-1'].parts.changeKey(fromName='Part-Wing-Main-Spar-failed', 
+    toName='Part-Wing-Main-Spar')
+mdb.models['Model-1'].Part(name='Part-Wing-Rib-failed', objectToCopy=
+    mdb.models['Model-1'].parts['Part-Wing-Rib'])
+mdb.models['Model-1'].parts['Part-Wing-Rib-failed'].Unlock(reportWarnings=
+    False)
+del mdb.models['Model-1'].parts['Part-Wing-Rib']
+mdb.models['Model-1'].parts.changeKey(fromName='Part-Wing-Rib-failed', toName=
+    'Part-Wing-Rib')
+mdb.models['Model-1'].Part(name='Part-Wing-Skin-failed', objectToCopy=
+    mdb.models['Model-1'].parts['Part-Wing-Skin'])
+mdb.models['Model-1'].parts['Part-Wing-Skin-failed'].Unlock(reportWarnings=
+    False)
+del mdb.models['Model-1'].parts['Part-Wing-Skin']
+mdb.models['Model-1'].parts.changeKey(fromName='Part-Wing-Skin-failed', toName=
+    'Part-Wing-Skin')
+mdb.models['Model-1'].Part(name='Part-Wing-Stl-failed', objectToCopy=
+    mdb.models['Model-1'].parts['Part-Wing-Stl'])
+mdb.models['Model-1'].parts['Part-Wing-Stl-failed'].Unlock(reportWarnings=
+    False)
+del mdb.models['Model-1'].parts['Part-Wing-Stl']
+mdb.models['Model-1'].parts.changeKey(fromName='Part-Wing-Stl-failed', toName=
+    'Part-Wing-Stl')
+mdb.models['Model-1'].rootAssembly.regenerate()
+#* FeatureError: The assembly is locked and cannot be regenerated.
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.unlock()
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].boundaryConditions['BC-Dis']
+mdb.models['Model-1'].Moment(cm1=1000.0, createStepName='Step-Static-Analysis', 
+    distributionType=UNIFORM, field='', localCsys=None, name='Load-1', region=
+    Region(
+    vertices=mdb.models['Model-1'].rootAssembly.instances['Part-Merging-Geometry-1'].vertices.getSequenceFromMask(
+    mask=('[#0:22 #100 ]', ), )))
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Model-1', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='Job-CM-001', nodalOutputPrecision=SINGLE
+    , numCpus=1, numGPUs=0, queue=None, resultsFormat=ODB, scratch='', type=
+    ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-CM-001'].submit(consistencyChecking=OFF, datacheckJob=True)
+mdb.jobs['Job-CM-001']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 0, 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 elements are curved/warped. The angle subtended between the average element normal and a nodal normal exceeds 10 degrees. Mesh refinement is recommended. The elements have been identified in element set WarnElemWarped.', 
+    'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'F:\\ABAQUS_Course_Report\\Job-CM-001.odb', 
+    'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 14228, 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-CM-001', 'memory': 1798.0})
+mdb.jobs['Job-CM-001']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(JOB_COMPLETED, {
+    'time': 'Mon Jul 06 20:02:55 2020', 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-CM-001']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 0, 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 elements are curved/warped. The angle subtended between the average element normal and a nodal normal exceeds 10 degrees. Mesh refinement is recommended. The elements have been identified in element set WarnElemWarped.', 
+    'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'F:\\ABAQUS_Course_Report\\Job-CM-001.odb', 
+    'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 5420, 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-CM-001', 'memory': 2273.0})
+mdb.jobs['Job-CM-001']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-CM-001', 'severe': 0, 'iterations': 1, 
+    'phase': STANDARD_PHASE, 'equilibrium': 1})
+mdb.jobs['Job-CM-001']._Message(END_STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-CM-001'})
+mdb.jobs['Job-CM-001']._Message(JOB_COMPLETED, {
+    'time': 'Mon Jul 06 20:04:06 2020', 'jobName': 'Job-CM-001'})
+del mdb.models['Model-1'].loads['Load-1']
+mdb.models['Model-1'].Pressure(amplitude=UNSET, createStepName=
+    'Step-Static-Analysis', distributionType=UNIFORM, field='', magnitude=
+    1000.0, name='Load-1', region=Region(
+    side2Faces=mdb.models['Model-1'].rootAssembly.instances['Part-Merging-Geometry-1'].faces.getSequenceFromMask(
+    mask=('[#0:3 #6 #0 #80000 #600 #3ff ]', ), ), 
+    side2Edges=mdb.models['Model-1'].rootAssembly.instances['Part-Merging-Geometry-1'].edges.getSequenceFromMask(
+    mask=('[#0 #10000 #0:7 #1000000 ]', ), )))
+del mdb.models['Model-1'].loads['Load-1']
+mdb.models['Model-1'].Pressure(amplitude=UNSET, createStepName=
+    'Step-Static-Analysis', distributionType=UNIFORM, field='', magnitude=
+    1000.0, name='Load-1', region=Region(
+    side2Faces=mdb.models['Model-1'].rootAssembly.instances['Part-Merging-Geometry-1'].faces.getSequenceFromMask(
+    mask=('[#0:3 #f #0 #c0000 #f00 #300 ]', ), )))
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs.changeKey(fromName='Job-CM-001', toName='Job-Pe-001')
+mdb.jobs['Job-Pe-001'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-Pe-001']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 0, 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 elements are curved/warped. The angle subtended between the average element normal and a nodal normal exceeds 10 degrees. Mesh refinement is recommended. The elements have been identified in element set WarnElemWarped.', 
+    'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'F:\\ABAQUS_Course_Report\\Job-Pe-001.odb', 
+    'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 6280, 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-Pe-001', 'memory': 2273.0})
+mdb.jobs['Job-Pe-001']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-Pe-001', 'severe': 0, 'iterations': 2, 
+    'phase': STANDARD_PHASE, 'equilibrium': 2})
+mdb.jobs['Job-Pe-001']._Message(END_STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(JOB_COMPLETED, {
+    'time': 'Mon Jul 06 20:11:44 2020', 'jobName': 'Job-Pe-001'})
+del mdb.models['Model-1'].loads['Load-1']
+mdb.models['Model-1'].ConcentratedForce(cf2=1000.0, createStepName=
+    'Step-Static-Analysis', distributionType=UNIFORM, field='', localCsys=None, 
+    name='Load-1', region=Region(
+    vertices=mdb.models['Model-1'].rootAssembly.instances['Part-Merging-Geometry-1'].vertices.getSequenceFromMask(
+    mask=('[#0:9 #80 #0:10 #400000 ]', ), )))
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Job-Pe-001'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-Pe-001']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 0, 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 elements are curved/warped. The angle subtended between the average element normal and a nodal normal exceeds 10 degrees. Mesh refinement is recommended. The elements have been identified in element set WarnElemWarped.', 
+    'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'F:\\ABAQUS_Course_Report\\Job-Pe-001.odb', 
+    'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 2576, 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-Pe-001', 'memory': 2273.0})
+mdb.jobs['Job-Pe-001']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'Job-Pe-001', 'severe': 0, 'iterations': 2, 
+    'phase': STANDARD_PHASE, 'equilibrium': 2})
+mdb.jobs['Job-Pe-001']._Message(END_STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-Pe-001'})
+mdb.jobs['Job-Pe-001']._Message(JOB_COMPLETED, {
+    'time': 'Mon Jul 06 20:16:08 2020', 'jobName': 'Job-Pe-001'})
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['Sketch-Airfoil-Skin'])
+mdb.models['Model-1'].sketches.changeKey(fromName='__edit__', toName=
+    'Sketch-Airfoil-Skin')
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['Sketch-Airfoil'])
+del mdb.models['Model-1'].sketches['__edit__']
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['Sketch-Airfoil'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['Sketch-Airfoil-Skin'])
+mdb.models['Model-1'].sketches.changeKey(fromName='__edit__', toName=
+    'Sketch-Airfoil-Skin')
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['Sketch-Airfoil-Skin'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['Sketch-Main-Parts'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['Sketch-Rib-Outline'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['Sketch-Main-Parts'])
+mdb.models['Model-1'].sketches.changeKey(fromName='__edit__', toName=
+    'Sketch-Main-Parts')
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=200.0)
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=200.0)
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].materials['Material-Alum-LV12'].Density(table=((2.7e-09, 
+    ), ))
+mdb.models['Model-1'].Material(name='Material-Composite')
+mdb.models['Model-1'].materials['Material-Composite'].Elastic(table=((100000.0, 
+    50000.0, 50000.0, 0.3, 0.3, 0.3, 50000.0, 50000.0, 50000.0), ), type=
+    ENGINEERING_CONSTANTS)
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].materials['Material-Composite'].Density(table=((2.7e-09, 
+    ), ))
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].materials['Material-Composite'].density.setValues(table=(
+    (1.773e-09, ), ))
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].CompositeShellSection(idealization=NO_IDEALIZATION, 
+    integrationRule=SIMPSON, layup=(SectionLayer(thickness=0.25, 
+    material='Material-Composite', plyName='1'), SectionLayer(thickness=0.25, 
+    orientAngle=45.0, material='Material-Composite', plyName='2'), 
+    SectionLayer(thickness=0.25, orientAngle=-45.0, 
+    material='Material-Composite', plyName='3'), SectionLayer(thickness=0.25, 
+    orientAngle=60.0, material='Material-Composite', plyName='4'), 
+    SectionLayer(thickness=0.25, orientAngle=90.0, 
+    material='Material-Composite', plyName='5')), name='Section-Composite', 
+    poissonDefinition=DEFAULT, preIntegrate=OFF, symmetric=True, temperature=
+    GRADIENT, thicknessModulus=None, thicknessType=UNIFORM, useDensity=OFF)
+del mdb.models['Model-1'].parts['Part-Wing-Skin'].sectionAssignments[0]
+mdb.models['Model-1'].parts['Part-Wing-Skin'].Set(faces=
+    mdb.models['Model-1'].parts['Part-Wing-Skin'].faces.getSequenceFromMask((
+    '[#7 ]', ), ), name='Set-Wing-Skin-Composite')
+mdb.models['Model-1'].parts['Part-Wing-Skin'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=TOP_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-Wing-Skin'].sets['Set-Wing-Skin-Composite']
+    , sectionName='Section-Composite', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['Part-Wing-Skin'].setValues(geometryRefinement=
+    FINE)
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.features['Part-Wing-Rib-1'].resume()
+del mdb.models['Model-1'].rootAssembly.features['Part-Merging-Geometry-1']
+mdb.models['Model-1'].rootAssembly.resumeFeatures(('Part-Wing-Rib-1-lin-1-2', 
+    'Part-Wing-Rib-1-lin-1-3', 'Part-Wing-Rib-1-lin-1-4', 
+    'Part-Wing-Rib-1-lin-1-5', 'Part-Wing-Rib-1-lin-1-6', 
+    'Part-Wing-Rib-1-lin-1-7', 'Part-Wing-Rib-1-lin-1-8', 
+    'Part-Wing-Rib-1-lin-1-9', 'Part-Wing-Rib-1-lin-1-10', 
+    'Part-Wing-Rib-1-lin-1-11', 'Part-Wing-Main-Spar-1', 'Part-Wing-Skin-1', 
+    'Part-Wing-Stl-1'))
+del mdb.models['Model-1'].parts['Part-Merging-Geometry']
+del mdb.models['Model-1'].boundaryConditions['BC-Fix']
+del mdb.models['Model-1'].loads['Load-1']
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.suppressFeatures(('Part-Wing-Rib-1-lin-1-2', 
+    'Part-Wing-Rib-1-lin-1-3', 'Part-Wing-Rib-1-lin-1-4', 
+    'Part-Wing-Rib-1-lin-1-5', 'Part-Wing-Rib-1-lin-1-6', 
+    'Part-Wing-Rib-1-lin-1-7', 'Part-Wing-Rib-1-lin-1-8', 
+    'Part-Wing-Rib-1-lin-1-9', 'Part-Wing-Rib-1-lin-1-10', 
+    'Part-Wing-Rib-1-lin-1-11', 'Part-Wing-Main-Spar-1', 'Part-Wing-Skin-1', 
+    'Part-Wing-Stl-1'))
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.resumeFeatures(('Part-Wing-Rib-1-lin-1-2', 
+    'Part-Wing-Rib-1-lin-1-3', 'Part-Wing-Rib-1-lin-1-4', 
+    'Part-Wing-Rib-1-lin-1-5', 'Part-Wing-Rib-1-lin-1-6', 
+    'Part-Wing-Rib-1-lin-1-7', 'Part-Wing-Rib-1-lin-1-8', 
+    'Part-Wing-Rib-1-lin-1-9', 'Part-Wing-Rib-1-lin-1-10', 
+    'Part-Wing-Rib-1-lin-1-11'))
+mdb.models['Model-1'].rootAssembly.resumeFeatures(('Part-Wing-Main-Spar-1', 
+    'Part-Wing-Skin-1', 'Part-Wing-Stl-1'))
+mdb.models['Model-1'].rootAssembly.InstanceFromBooleanMerge(domain=GEOMETRY, 
+    instances=(mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Rib-1'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Rib-1-lin-1-2'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Rib-1-lin-1-3'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Rib-1-lin-1-4'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Rib-1-lin-1-5'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Rib-1-lin-1-6'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Rib-1-lin-1-7'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Rib-1-lin-1-8'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Rib-1-lin-1-9'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Rib-1-lin-1-10'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Rib-1-lin-1-11'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Main-Spar-1'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Skin-1'], 
+    mdb.models['Model-1'].rootAssembly.instances['Part-Wing-Stl-1']), 
+    keepIntersections=ON, name='Part-Merge-Geometry-Wing', originalInstances=
+    SUPPRESS)
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].steps['Step-Static-Analysis']
+mdb.models['Model-1'].StaticStep(name='Step-Static-Analysis', previous=
+    'Initial')
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].steps['Step-Static-Analysis']
+mdb.models['Model-1'].FrequencyStep(name='Step-Frequency-Analysis', numEigen=5, 
+    previous='Initial')
+del mdb.models['Model-1'].steps['Step-Frequency-Analysis']
+mdb.models['Model-1'].StaticStep(name='Step-Static-Analysis', previous=
+    'Initial')
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-Merge-Geometry-Wing-1'].edges.getSequenceFromMask(
+    ('[#0:31 #400000 #40000 #0:2 #10000001 ]', ), ), faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-Merge-Geometry-Wing-1'].faces.getSequenceFromMask(
+    ('[#0:12 #22400 ]', ), ), name='Set-Fix')
+mdb.models['Model-1'].EncastreBC(createStepName='Step-Static-Analysis', 
+    localCsys=None, name='BC-Fix', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-Fix'])
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-Merge-Geometry-Wing-1'].edges.getSequenceFromMask(
+    ('[#0:37 #2 ]', ), ), faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-Merge-Geometry-Wing-1'].faces.getSequenceFromMask(
+    ('[#0:8 #efdc0018 #f ]', ), ), name='Set-Displacement')
+mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName=
+    'Step-Static-Analysis', distributionType=UNIFORM, fieldName='', fixed=OFF, 
+    localCsys=None, name='BC-Displacement', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-Displacement'], u1=0.0, u2=
+    12.0, u3=0.0, ur1=UNSET, ur2=UNSET, ur3=UNSET)
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-Merge-Geometry-Wing'].setElementType(
+    elemTypes=(ElemType(elemCode=S4R, elemLibrary=STANDARD, 
+    secondOrderAccuracy=OFF, hourglassControl=DEFAULT), ElemType(elemCode=S3, 
+    elemLibrary=STANDARD)), regions=(
+    mdb.models['Model-1'].parts['Part-Merge-Geometry-Wing'].faces.getSequenceFromMask(
+    ('[#ffffffff:16 ]', ), ), ))
+mdb.models['Model-1'].parts['Part-Merge-Geometry-Wing'].seedPart(
+    deviationFactor=0.1, minSizeFactor=0.1, size=13.0)
+mdb.models['Model-1'].parts['Part-Merge-Geometry-Wing'].setMeshControls(
+    algorithm=MEDIAL_AXIS, regions=
+    mdb.models['Model-1'].parts['Part-Merge-Geometry-Wing'].faces.getSequenceFromMask(
+    ('[#ffffffff:16 ]', ), ))
+mdb.models['Model-1'].parts['Part-Merge-Geometry-Wing'].generateMesh()
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.regenerate()
+del mdb.jobs['Job-Pe-001']
+mdb.jobs['Job-Static-Analysis-Check'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-Static-Analysis-Check']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'clientHost': 'NWPUFZH', 'handle': 0, 
+    'jobName': 'Job-Static-Analysis-Check'})
+mdb.jobs['Job-Static-Analysis-Check']._Message(HEADING, {
+    'phase': BATCHPRE_PHASE, 'heading': 'Static Analysis for Wing', 
+    'jobName': 'Job-Static-Analysis-Check'})
+mdb.jobs['Job-Static-Analysis-Check']._Message(WARNING, {
+    'phase': BATCHPRE_PHASE, 
+    'message': '11 elements are curved/warped. The angle subtended between the average element normal and a nodal normal exceeds 10 degrees. Mesh refinement is recommended. The elements have been identified in element set WarnElemWarped.', 
+    'jobName': 'Job-Static-Analysis-Check'})
+mdb.jobs['Job-Static-Analysis-Check']._Message(ODB_FILE, {
+    'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Software\\SIMULIA_Cache\\Job-Static-Analysis-Check.odb', 
+    'jobName': 'Job-Static-Analysis-Check'})
+mdb.jobs['Job-Static-Analysis-Check']._Message(COMPLETED, {
+    'phase': BATCHPRE_PHASE, 'message': 'Analysis phase complete', 
+    'jobName': 'Job-Static-Analysis-Check'})
+mdb.jobs['Job-Static-Analysis-Check']._Message(STARTED, {
+    'phase': STANDARD_PHASE, 'clientHost': 'NWPUFZH', 'handle': 13972, 
+    'jobName': 'Job-Static-Analysis-Check'})
+mdb.jobs['Job-Static-Analysis-Check']._Message(STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'Job-Static-Analysis-Check'})
+mdb.jobs['Job-Static-Analysis-Check']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 0, 
+    'jobName': 'Job-Static-Analysis-Check'})
+mdb.jobs['Job-Static-Analysis-Check']._Message(MEMORY_ESTIMATE, {
+    'phase': STANDARD_PHASE, 'jobName': 'Job-Static-Analysis-Check', 
+    'memory': 2552.0})
+mdb.jobs['Job-Static-Analysis-Check']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 1, 
+    'jobName': 'Job-Static-Analysis-Check'})
+mdb.jobs['Job-Static-Analysis-Check']._Message(STATUS, {'totalTime': 1.0, 
+    'attempts': 1, 'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 
+    'step': 1, 'jobName': 'Job-Static-Analysis-Check', 'severe': 0, 
+    'iterations': 2, 'phase': STANDARD_PHASE, 'equilibrium': 2})
+mdb.jobs['Job-Static-Analysis-Check']._Message(END_STEP, {
+    'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-Static-Analysis-Check'})
+mdb.jobs['Job-Static-Analysis-Check']._Message(COMPLETED, {
+    'phase': STANDARD_PHASE, 'message': 'Analysis phase complete', 
+    'jobName': 'Job-Static-Analysis-Check'})
+mdb.jobs['Job-Static-Analysis-Check']._Message(JOB_COMPLETED, {
+    'time': 'Tue Jul 07 16:00:34 2020', 
+    'jobName': 'Job-Static-Analysis-Check'})
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Job-Static-Analysis-Submit'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-Static-Analysis-Submit']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'clientHost': 'NWPUFZH', 'handle': 0, 
+    'jobName': 'Job-Static-Analysis-Submit'})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(HEADING, {
+    'phase': BATCHPRE_PHASE, 'heading': 'Static Analysis for Wing', 
+    'jobName': 'Job-Static-Analysis-Submit'})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(WARNING, {
+    'phase': BATCHPRE_PHASE, 
+    'message': '11 elements are curved/warped. The angle subtended between the average element normal and a nodal normal exceeds 10 degrees. Mesh refinement is recommended. The elements have been identified in element set WarnElemWarped.', 
+    'jobName': 'Job-Static-Analysis-Submit'})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(ODB_FILE, {
+    'phase': BATCHPRE_PHASE, 
+    'file': 'F:\\ABAQUS_Course_Report\\Job-Static-Analysis-Submit.odb', 
+    'jobName': 'Job-Static-Analysis-Submit'})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(COMPLETED, {
+    'phase': BATCHPRE_PHASE, 'message': 'Analysis phase complete', 
+    'jobName': 'Job-Static-Analysis-Submit'})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(STARTED, {
+    'phase': STANDARD_PHASE, 'clientHost': 'NWPUFZH', 'handle': 932, 
+    'jobName': 'Job-Static-Analysis-Submit'})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'Job-Static-Analysis-Submit'})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 0, 
+    'jobName': 'Job-Static-Analysis-Submit'})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(MEMORY_ESTIMATE, {
+    'phase': STANDARD_PHASE, 'jobName': 'Job-Static-Analysis-Submit', 
+    'memory': 2552.0})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 1, 
+    'jobName': 'Job-Static-Analysis-Submit'})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(STATUS, {'totalTime': 1.0, 
+    'attempts': 1, 'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 
+    'step': 1, 'jobName': 'Job-Static-Analysis-Submit', 'severe': 0, 
+    'iterations': 2, 'phase': STANDARD_PHASE, 'equilibrium': 2})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(END_STEP, {
+    'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-Static-Analysis-Submit'})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(COMPLETED, {
+    'phase': STANDARD_PHASE, 'message': 'Analysis phase complete', 
+    'jobName': 'Job-Static-Analysis-Submit'})
+mdb.jobs['Job-Static-Analysis-Submit']._Message(JOB_COMPLETED, {
+    'time': 'Tue Jul 07 16:48:16 2020', 
+    'jobName': 'Job-Static-Analysis-Submit'})
+# Save by nwpufzh on 2020_07_07-17.24.30; build 2016 2015_09_25-04.31.09 126547
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].steps['Step-Static-Analysis']
+mdb.models['Model-1'].FrequencyStep(name='Step-Frequency-Analysis', numEigen=5, 
+    previous='Initial')
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-Merge-Geometry-Wing-1'].edges.getSequenceFromMask(
+    ('[#0:31 #400000 #40000 #0:2 #10000001 ]', ), ), faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-Merge-Geometry-Wing-1'].faces.getSequenceFromMask(
+    ('[#0:12 #22400 ]', ), ), name='Set-Fix-Fre')
+mdb.models['Model-1'].EncastreBC(createStepName='Initial', localCsys=None, 
+    name='BC-Fix', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-Fix-Fre'])
+# Save by nwpufzh on 2020_07_07-17.26.12; build 2016 2015_09_25-04.31.09 126547
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.jobs['Job-Static-Analysis-Check']
+del mdb.jobs['Job-Static-Analysis-Submit']
+mdb.Job(atTime=None, contactPrint=OFF, description=
+    'This model is designed for the frequendy analysis of the wing', echoPrint=
+    OFF, explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF
+    , memory=90, memoryUnits=PERCENTAGE, model='Model-1', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='Job-Frequency-Analysis', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['Job-Frequency-Analysis'].submit(consistencyChecking=OFF, 
+    datacheckJob=True)
+mdb.jobs['Job-Frequency-Analysis']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 0, 'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(HEADING, {'phase': BATCHPRE_PHASE, 
+    'heading': 'This model is designed for the frequendy analysis of the wing', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 elements are curved/warped. The angle subtended between the average element normal and a nodal normal exceeds 10 degrees. Mesh refinement is recommended. The elements have been identified in element set WarnElemWarped.', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'F:\\ABAQUS_Course_Report\\Job-Frequency-Analysis.odb', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(COMPLETED, {
+    'phase': BATCHPRE_PHASE, 'message': 'Analysis phase complete', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 11148, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 0, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(MEMORY_ESTIMATE, {
+    'phase': STANDARD_PHASE, 'jobName': 'Job-Frequency-Analysis', 
+    'memory': 4185.0})
+mdb.jobs['Job-Frequency-Analysis']._Message(COMPLETED, {
+    'phase': STANDARD_PHASE, 'message': 'Analysis phase complete', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(JOB_COMPLETED, {
+    'time': 'Tue Jul 07 17:27:56 2020', 'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-Frequency-Analysis']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 0, 'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(HEADING, {'phase': BATCHPRE_PHASE, 
+    'heading': 'This model is designed for the frequendy analysis of the wing', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 elements are curved/warped. The angle subtended between the average element normal and a nodal normal exceeds 10 degrees. Mesh refinement is recommended. The elements have been identified in element set WarnElemWarped.', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'F:\\ABAQUS_Course_Report\\Job-Frequency-Analysis.odb', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(COMPLETED, {
+    'phase': BATCHPRE_PHASE, 'message': 'Analysis phase complete', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 3108, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 0, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(MEMORY_ESTIMATE, {
+    'phase': STANDARD_PHASE, 'jobName': 'Job-Frequency-Analysis', 
+    'memory': 5003.0})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 1, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 2, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 3, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 4, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 5, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(STATUS, {'totalTime': 0.0, 
+    'attempts': 1, 'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 
+    'step': 1, 'jobName': 'Job-Frequency-Analysis', 'severe': 0, 
+    'iterations': 0, 'phase': STANDARD_PHASE, 'equilibrium': 0})
+mdb.jobs['Job-Frequency-Analysis']._Message(END_STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(COMPLETED, {
+    'phase': STANDARD_PHASE, 'message': 'Analysis phase complete', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(JOB_COMPLETED, {
+    'time': 'Tue Jul 07 17:30:39 2020', 'jobName': 'Job-Frequency-Analysis'})
+# Save by nwpufzh on 2020_07_07-17.37.46; build 2016 2015_09_25-04.31.09 126547
+# Save by nwpufzh on 2020_07_07-17.39.05; build 2016 2015_09_25-04.31.09 126547
+# Save by nwpufzh on 2020_07_07-18.00.12; build 2016 2015_09_25-04.31.09 126547
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Job-Frequency-Analysis'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-Frequency-Analysis']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 0, 'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(HEADING, {'phase': BATCHPRE_PHASE, 
+    'heading': 'This model is designed for the frequendy analysis of the wing', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 elements are curved/warped. The angle subtended between the average element normal and a nodal normal exceeds 10 degrees. Mesh refinement is recommended. The elements have been identified in element set WarnElemWarped.', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\Administrator\\Desktop\\model\\Job-Frequency-Analysis.odb', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(COMPLETED, {
+    'phase': BATCHPRE_PHASE, 'message': 'Analysis phase complete', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'NWPUFZH', 'handle': 2328, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 0, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(MEMORY_ESTIMATE, {
+    'phase': STANDARD_PHASE, 'jobName': 'Job-Frequency-Analysis', 
+    'memory': 5003.0})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 1, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 2, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 3, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 4, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(ODB_FRAME, {
+    'phase': STANDARD_PHASE, 'step': 0, 'frame': 5, 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(STATUS, {'totalTime': 0.0, 
+    'attempts': 1, 'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 
+    'step': 1, 'jobName': 'Job-Frequency-Analysis', 'severe': 0, 
+    'iterations': 0, 'phase': STANDARD_PHASE, 'equilibrium': 0})
+mdb.jobs['Job-Frequency-Analysis']._Message(END_STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(COMPLETED, {
+    'phase': STANDARD_PHASE, 'message': 'Analysis phase complete', 
+    'jobName': 'Job-Frequency-Analysis'})
+mdb.jobs['Job-Frequency-Analysis']._Message(JOB_COMPLETED, {
+    'time': 'Tue Jul 07 20:50:24 2020', 'jobName': 'Job-Frequency-Analysis'})
+# Save by nwpufzh on 2020_07_07-20.50.50; build 2016 2015_09_25-04.31.09 126547

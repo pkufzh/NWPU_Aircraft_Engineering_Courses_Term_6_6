@@ -1,0 +1,10 @@
+# family_boco file written by ICEM CFD by nwpufzh on Sat Jun 06 22:15:16 中国标准时间 2020
+## solver ANSYS Fluent
+"FAR"
+"FAR" "color" 255
+"WALL"
+"WALL" "color" 255
+"FLUID"
+"FLUID" "color" 12109100
+"NULL"
+"NULL" "color" 3406930

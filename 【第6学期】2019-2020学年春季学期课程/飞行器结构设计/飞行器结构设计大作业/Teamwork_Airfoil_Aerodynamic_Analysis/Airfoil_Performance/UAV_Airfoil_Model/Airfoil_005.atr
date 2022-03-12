@@ -1,0 +1,37 @@
+# Written by ICEM CFD 18.2, user nwpufzh, Sat Jun 06 22:15:16 中国标准时间 2020
+
+begin family FAR
+    begin solver "ANSYS Fluent"
+        begin bctype color
+            active 1
+            color 255 1
+        end bctype color
+    end solver "ANSYS Fluent"
+end family FAR
+
+begin family WALL
+    begin solver "ANSYS Fluent"
+        begin bctype color
+            active 1
+            color 255 1
+        end bctype color
+    end solver "ANSYS Fluent"
+end family WALL
+
+begin family FLUID
+    begin solver "ANSYS Fluent"
+        begin bctype color
+            active 1
+            color 12109100 1
+        end bctype color
+    end solver "ANSYS Fluent"
+end family FLUID
+
+begin family NULL
+    begin solver "ANSYS Fluent"
+        begin bctype color
+            active 1
+            color 3406930 1
+        end bctype color
+    end solver "ANSYS Fluent"
+end family NULL

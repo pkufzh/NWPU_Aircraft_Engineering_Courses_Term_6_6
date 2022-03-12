@@ -1,0 +1,21 @@
+【个人信息】
+    学院：航空学院
+    姓名：FZH
+    学号：2017300281
+    专业：飞行器设计与工程
+
+【课程报告】
+    PDF与Word版本的课程报告已经存放在“2017300281-冯铮浩-课程报告”文件夹下
+
+【模型文件】
+    模型文件夹“2017300281-Model”（英文路径）下有两组模型，分别为：
+    ① Project_Wing_Static_Analysis.cae/.jnl （复合材料蒙皮机翼静力分析模型）
+    ② Project_Wing_Frequency_Analysis.cae/.jnl （复合材料蒙皮机翼结构模态分析模型）
+
+    同时将两组任务作业文件也一同保存，分别为：
+    ① Job-Static-Analysis-Submit.odb/.inp（复合材料蒙皮机翼静力分析作业）
+    ② Job-Frequency-Analysis.odb/.inp （复合材料蒙皮机翼结构模态分析作业）
+
+   注：上述模型与结果文件均在ABAQUS 2016软件下创建，版本为6.16
+
+   以上文件请刘老师查阅！辛苦刘老师了！
